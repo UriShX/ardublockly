@@ -1,13 +1,14 @@
 {
 	"@metadata": {
 		"author": "carlosperate",
-		"lastupdated": "2017-04-24 19:27:01.120000",
+		"lastupdated": "2018-06-11 19:02:31.933819",
 		"locale": "en",
 		"messagedocumentation" : "qqq_ardublockly"
 	},
 	"ARD_TYPE_CHAR": "Character",
 	"ARD_TYPE_TEXT": "Text",
 	"ARD_TYPE_BOOL": "Boolean",
+	"ARD_TYPE_POSITIVE_SHORT": "Short Positive Number",
 	"ARD_TYPE_SHORT": "Short Number",
 	"ARD_TYPE_NUMBER": "Number",
 	"ARD_TYPE_LONG": "Large Number",

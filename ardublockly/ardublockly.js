@@ -20,7 +20,7 @@ Ardublockly.init = function() {
   Ardublockly.importExtraBlocks();
 
   Ardublockly.designJsInit();
-  Ardublockly.initialiseIdeButtons();
+  // Ardublockly.initialiseIdeButtons();
 
   Ardublockly.bindDesignEventListeners();
   Ardublockly.bindActionFunctions();
@@ -28,7 +28,7 @@ Ardublockly.init = function() {
 
   // Hackish way to check if not running locally
   if (document.location.hostname != 'localhost') {
-    Ardublockly.openNotConnectedModal();
+    //Ardublockly.openNotConnectedModal();//removed
     console.log('Offline app modal opened as non localhost host name found: ' +
                 document.location.hostname)
   }
@@ -37,8 +37,13 @@ Ardublockly.init = function() {
 /** Binds functions to each of the buttons, nav links, and related. */
 Ardublockly.bindActionFunctions = function() {
   // Navigation buttons
-  Ardublockly.bindClick_('button_load', Ardublockly.loadUserXmlFile);
-  Ardublockly.bindClick_('button_save', Ardublockly.saveXmlFile);
+//   Ardublockly.bindClick_('button_load', Ardublockly.loadUserXmlFile);
+//   Ardublockly.bindClick_('button_save_xml', Ardublockly.saveXmlFile);
+  Ardublockly.bindClick_('button_arduino_create', function() {
+    var win = window.open('https://create.arduino.cc', '_blank');
+    win.focus();
+  });
+  Ardublockly.bindClick_('button_save_arduino', Ardublockly.saveSketchFile);
   Ardublockly.bindClick_('button_delete', Ardublockly.discardAllBlocks);
 
   // Side menu buttons, they also close the side menu
@@ -80,16 +85,18 @@ Ardublockly.bindActionFunctions = function() {
   });
 
   // Floating buttons
-  Ardublockly.bindClick_('button_ide_large', function() {
-    Ardublockly.ideButtonLargeAction();
-  });
-  Ardublockly.bindClick_('button_ide_middle', function() {
-      Ardublockly.ideButtonMiddleAction();
-  });
-  Ardublockly.bindClick_('button_ide_left', function() {
-    Ardublockly.ideButtonLeftAction();
-  });
-  Ardublockly.bindClick_('button_load_xml', Ardublockly.XmlTextareaToBlocks);
+  // Ardublockly.bindClick_('button_ide_large', function() {
+  //   //Ardublockly.ideButtonLargeAction();//removed
+  //   var win = window.open('https://create.arduino.cc', '_blank');
+  //   win.focus();
+  // });
+  // Ardublockly.bindClick_('button_ide_middle', function() {
+  //     Ardublockly.ideButtonMiddleAction();
+  // });
+  // Ardublockly.bindClick_('button_ide_left', function() {
+  //   Ardublockly.ideButtonLeftAction();
+  // });
+  // Ardublockly.bindClick_('button_load_xml', Ardublockly.XmlTextareaToBlocks);
   Ardublockly.bindClick_('button_toggle_toolbox', Ardublockly.toogleToolbox);
 
   // Settings modal input field listeners only if they can be edited
@@ -622,7 +629,7 @@ Ardublockly.importExtraBlocks = function() {
    * @return {undefined} Might exit early if response is null.
    */
   var jsonDataCb = function(jsonDataObj) {
-    if (jsonDataObj === null) return Ardublockly.openNotConnectedModal();
+    //if (jsonDataObj === null) return Ardublockly.openNotConnectedModal(); //Remved to see if calls app
     if (jsonDataObj.categories !== undefined) {
       var head = document.getElementsByTagName('head')[0];
       for (var catDir in jsonDataObj.categories) {

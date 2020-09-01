@@ -34,6 +34,13 @@ Blockly.Types.BOOLEAN = new Blockly.Type({
   compatibleTypes: []
 });
 
+/** Short positive integer number. */
+Blockly.Types.SHORT_POSITIVE_NUMBER = new Blockly.Type({
+  typeId: 'Short Positive Number',
+  typeMsgName: 'ARD_TYPE_POSITIVE_SHORT',
+  compatibleTypes: []    // Circular dependencies, add after all declarations
+});
+
 /** Short integer number. */
 Blockly.Types.SHORT_NUMBER = new Blockly.Type({
   typeId: 'Short Number',
@@ -99,18 +106,21 @@ Blockly.Types.CHILD_BLOCK_MISSING = new Blockly.Type({
  */
 Blockly.Types.NUMBER.addCompatibleTypes([
     Blockly.Types.BOOLEAN,
+    Blockly.Types.SHORT_POSITIVE_NUMBER,
     Blockly.Types.SHORT_NUMBER,
     Blockly.Types.LARGE_NUMBER,
     Blockly.Types.DECIMAL]);
 
 Blockly.Types.SHORT_NUMBER.addCompatibleTypes([
     Blockly.Types.BOOLEAN,
+    Blockly.Types.SHORT_POSITIVE_NUMBER,
     Blockly.Types.NUMBER,
     Blockly.Types.LARGE_NUMBER,
     Blockly.Types.DECIMAL]);
 
 Blockly.Types.LARGE_NUMBER.addCompatibleTypes([
     Blockly.Types.BOOLEAN,
+    Blockly.Types.SHORT_POSITIVE_NUMBER,
     Blockly.Types.SHORT_NUMBER,
     Blockly.Types.NUMBER,
     Blockly.Types.DECIMAL]);
@@ -221,4 +231,3 @@ Blockly.Types.identifyNumber = function(numberString) {
     }
     return Blockly.Types.NULL;
 };
-

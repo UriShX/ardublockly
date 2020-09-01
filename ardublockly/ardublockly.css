@@ -27,7 +27,7 @@ body {
 }
 
 body {
-  background-color: #eeeeee;
+  background-color: #9e9e9e;/*#eeeeee;*/
   -moz-user-select: -moz-none;
   -khtml-user-select: none;
   -webkit-user-select: none;
@@ -40,17 +40,17 @@ body {
 /*  Arduino Colours  */
 /*********************/
 .arduino_teal {
-  background-color: #00979C;
+  background-color: #424242;//#00979C;
 }
 .arduino_teal_dark {
   background-color: #006468;
   /* background-color: #00878F; from community logo */
 }
 .arduino_teal_light {
-  background-color: #62AEB2;
+  background-color: #757575;// #62AEB2;
 }
 .arduino_orange {
-  background-color: #E47128;
+  background-color: #4caf50;// #E47128;
 }
 .arduino_yellow {
   background-color: rgba(255, 204, 51, 1);
@@ -98,7 +98,7 @@ ul.side-nav li.logo:hover {
   background-color: transparent;
 }
 ul.side-nav li.side-menu-end {
-  background-color: #eeeeee;
+  background-color: #8f9091;/*#eeeeee;*/
   border-radius: 0px 0px 25px 0px;
   border-left: 4px solid #ffffff;
   border-bottom: 4px solid #dddddd;
@@ -114,7 +114,7 @@ ul.side-nav li.side-menu-end {
   margin: 0;
   padding: 0;
   width: 100%;
-  background-color: #ffffff;
+  background-color: #e0e0e0;//#ffffff;
 }
 .height_transition {
   transition: height 0.2s ease-out;
@@ -263,7 +263,7 @@ ul.side-nav li.side-menu-end {
 }
 /* IDE output content text formatting */
 #content_ide_output .arduino_dialog_success {
-  color: #00979C;   /* arduino light teal */
+  color: #424242;//#00979C;   /* arduino light teal */
   font-size: 1.2rem;
   margin: 16px 0px 8px 0px;
 }
@@ -395,21 +395,22 @@ ul.side-nav li.side-menu-end {
 .button_toggle_toolbox_on {
   position: absolute;
   margin: 0 !important;
-  padding: 0 !important;
+  padding: 0px !important;
   left: 12px;
   top: 8px;
   text-align: center;
   font-size: 1.5rem !important;
   z-index: 5;
-  border-color: #e0e0e0 !important;
+  border-color: #9e9e9e !important;
   border-width: 1px !important;
   -webkit-border-radius: 4px 4px 4px 4px !important;
   -moz-border-radius: 4px 4px 4px 4px !important;
   border-radius: 4px 4px 4px 4px !important;
-  background: rgba(98, 174, 178, .2) !important;  /* Arduino Light Teal */
+  background: #666 !important;//
+  rgba(98, 174, 178, .2) !important;  /* Arduino Light Teal */
   -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); 
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   transition: background 0.3s linear, box-shadow 0.3s linear, border-width 0.3s linear;
   -ms-transition: background 0.3s linear, box-shadow 0.3s linear, border-width 0.3s linear;
   -moz-transition: background 0.3s linear, -moz-box-shadow 0.3s linear, border-width 0.3s linear;
@@ -435,11 +436,11 @@ ul.side-nav li.side-menu-end {
   right: 0px !important;
   top: 0px !important;
   width: 55px !important;
-  height: 55px !important; 
+  height: 55px !important;
   z-index: 5;
 }
 .spinner-orange {
-  border-color: #E47128;
+  border-color: #eeeeee;//#E47128;
 }
 .active .spinner-layer.spinner-orange {
   /* durations: 4 * ARCTIME */
@@ -492,7 +493,7 @@ ul.side-nav li.side-menu-end {
 /* Blocks tick label as a title */
 .modal_label_title {
   font-size: 1.6rem !important;
-  color: black;
+  color: #eeeeee;//black;
 }
 
 /* Blocks modal divider */
@@ -512,7 +513,7 @@ ul.side-nav li.side-menu-end {
   display: block;
 }
 .arduino_dialog_success {
-  color: #00979C;   /* arduino light teal */
+  color: #424242;//#00979C;   /* arduino light teal */
 }
 .arduino_dialog_failure {
   color: #E47128;   /* arduino orange */
@@ -645,7 +646,7 @@ ul.side-nav li.side-menu-end {
 
 /* Toolbox */
 .blocklyToolboxDiv {
-  border-color: #e0e0e0 !important;
+  border-color: #9e9e9e !important;
   border-width: 0px 1px 0px 0px !important;
   -webkit-border-radius: 0px 4px 4px 0px !important;
   -moz-border-radius: 4px 4px 0px 0px !important;
@@ -653,7 +654,7 @@ ul.side-nav li.side-menu-end {
   border: none !important;
   margin: 0px !important;
   padding: 0px 0px 0px 0px !important;
-  background: rgba(98, 174, 178, .2) !important;  /* Arduino Light Teal */
+  background: #424242 !important;//rgba(98, 174, 178, .2) !important;  /* Arduino Light Teal */
   -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);

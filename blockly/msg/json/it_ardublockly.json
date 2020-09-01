@@ -5,6 +5,7 @@
 	"ARD_TYPE_CHAR": "Carattere",
 	"ARD_TYPE_TEXT": "Testo",
 	"ARD_TYPE_BOOL": "Booleano",
+	"ARD_TYPE_POSITIVE_SHORT": "Numero breve positiva",
 	"ARD_TYPE_SHORT": "Numero breve",
 	"ARD_TYPE_NUMBER": "Numero",
 	"ARD_TYPE_LONG": "Numero Lungo",

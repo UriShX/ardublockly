@@ -70,7 +70,7 @@ Blockly.BlockSvg.NOTCH_WIDTH = 30;
  * Rounded corner radius.
  * @const
  */
-Blockly.BlockSvg.CORNER_RADIUS = 8;
+Blockly.BlockSvg.CORNER_RADIUS = 4;//8;
 /**
  * Do blocks with no previous or output connections have a 'hat' on top?
  * @const

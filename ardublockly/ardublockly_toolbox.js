@@ -12,6 +12,150 @@ var Ardublockly = Ardublockly || {};
 Ardublockly.TOOLBOX_XML =
 '<xml>' +
 '  <sep></sep>' +
+'  <category id="MIDI_LCD" name="MIDI LCD">'+
+'    <block type="smartcontrol_lcd" collapsed="true">'+
+'    <field name="PROTOCOL">SPI2Defs</field>'+
+'    <field name="controlPins">ENC</field>'+
+'    <value name="DEFINE_PROTOCOL">'+
+'      <block type="mcp23s08_pins" collapsed="true">'+
+'        <field name="CSPin">8</field>'+
+'        <field name="Address">0x00</field>'+
+'      </block>'+
+'    </value>'+
+'    <value name="DEFINE_CONTROL_PINS">'+
+'      <block type="enc_pins" collapsed="true">'+
+'        <field name="ENC_A">A2</field>'+
+'        <field name="ENC_BUT">8</field>'+
+'      </block>'+
+'    </value>'+
+'    <statement name="Splash">'+
+'      <block type="variables_set" collapsed="true">'+
+'        <field name="VAR">counter</field>'+
+'        <value name="VALUE">'+
+'          <block type="variables_set_type">'+
+'            <field name="VARIABLE_SETTYPE_TYPE">SHORT_NUMBER</field>'+
+'            <value name="VARIABLE_SETTYPE_INPUT">'+
+'              <block type="math_number">'+
+'                <field name="NUM">0</field>'+
+'              </block>'+
+'            </value>'+
+'          </block>'+
+'        </value>'+
+'        <next>'+
+'          <block type="clear_lcd">'+
+'            <next>'+
+'              <block type="print_line_1">'+
+'                <value name="NAME">'+
+'                  <block type="text">'+
+'                    <field name="TEXT">Test</field>'+
+'                  </block>'+
+'                </value>'+
+'                <next>'+
+'                  <block type="print_line_2">'+
+'                    <value name="NAME">'+
+'                      <block type="text">'+
+'                        <field name="TEXT">for 20x4 LCD and</field>'+
+'                      </block>'+
+'                    </value>'+
+'                    <next>'+
+'                      <block type="print_line_3">'+
+'                        <value name="NAME">'+
+'                          <block type="text">'+
+'                            <field name="TEXT">encoder.</field>'+
+'                          </block>'+
+'                        </value>'+
+'                        <next>'+
+'                          <block type="print_line_4">'+
+'                            <value name="NAME">'+
+'                              <block type="text">'+
+'                                <field name="TEXT">Rotate encoder...</field>'+
+'                              </block>'+
+'                            </value>'+
+'                          </block>'+
+'                        </next>'+
+'                      </block>'+
+'                    </next>'+
+'                  </block>'+
+'                </next>'+
+'              </block>'+
+'            </next>'+
+'          </block>'+
+'        </next>'+
+'      </block>'+
+'    </statement>'+
+'    <statement name="Menu">'+
+'      <block type="dynamic_msg" collapsed="true">'+
+'        <value name="messageVar">'+
+'          <block type="variables_get">'+
+'            <field name="VAR">counter</field>'+
+'          </block>'+
+'        </value>'+
+'        <statement name="INPUT">'+
+'          <block type="clear_lcd">'+
+'            <next>'+
+'              <block type="print_line_1">'+
+'                <value name="NAME">'+
+'                  <block type="text">'+
+'                    <field name="TEXT">Counter change:</field>'+
+'                  </block>'+
+'                </value>'+
+'                <next>'+
+'                  <block type="print_line_2">'+
+'                    <value name="NAME">'+
+'                      <block type="variables_get">'+
+'                        <field name="VAR">counter</field>'+
+'                      </block>'+
+'                    </value>'+
+'                  </block>'+
+'                </next>'+
+'              </block>'+
+'            </next>'+
+'          </block>'+
+'        </statement>'+
+'      </block>'+
+'    </statement>'+
+'  </block>'+
+'      <block type="enc_pins"></block>'+
+'      <block type="dynamic_msg"></block>'+
+'      <block type="clear_lcd"></block>'+
+'      <block type="print_line_1"></block>'+
+'      <block type="print_line_2"></block>'+
+'      <block type="print_line_3"></block>'+
+'      <block type="print_line_4"></block>'+
+'    </category>'+
+'  <sep></sep>' +
+'  <category id="UriShX_protocol" name="UriShX protocol">' +
+'      <block type="mcp23s08_pins"></block>'+
+'      <block type="mcp23008_addrs"></block>'+
+'  </category>' +
+'  <sep></sep>'+
+'  <category id="D_in_btns" name="Digital input matrix">'+
+'     <block type="digital_input_matrix">'+
+'       <field name="PROTOCOL">SPI2Defs</field>'+
+'    <value name="PROTOCOL">'+
+'        <block type="mcp23s08_pins">'+
+'        <field name="CSPin">8</field>'+
+'          <field name="Address">0x00</field>'+
+'        </block>'+
+'      </value>'+
+'      <statement name="BTN_LIST">'+
+'        <block type="btn_definition">'+
+'          <field name="BTN_NUM">1</field>'+
+'          <field name="ON_OFF">0</field>'+
+'          <value name="NAME">'+
+'            <block type="btn_value">'+
+'              <field name="cc_or_note">CC</field>'+
+'              <field name="note_list">0</field>'+
+'            </block>'+
+'          </value>'+
+'        </block>'+
+'      </statement>'+
+'    </block>'+
+'    <block type="btn_definition"></block>'+
+'    <block type="btn_value"></block>'+
+'  </category>'+
+'  <sep></sep>'+
+'  <category id="Advanced" name="Advenced">'+
 '  <category id="catLogic" name="Logic">' +
 '    <block type="controls_if"></block>' +
 '    <block type="logic_compare"></block>' +
@@ -231,4 +375,5 @@ Ardublockly.TOOLBOX_XML =
 '    <block type="spi_transfer"></block>' +
 '    <block type="spi_transfer_return"></block>' +
 '  </category>' +
+' </category>'+
 '</xml>';

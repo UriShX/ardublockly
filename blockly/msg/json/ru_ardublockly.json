@@ -5,6 +5,7 @@
 	"ARD_TYPE_CHAR": "Символ",
 	"ARD_TYPE_TEXT": "Текст",
 	"ARD_TYPE_BOOL": "Логическое",
+	"ARD_TYPE_POSITIVE_SHORT": "Arduino Types - Short number Arduino type byte",
 	"ARD_TYPE_SHORT": "Маленькое Число",
 	"ARD_TYPE_NUMBER": "Число",
 	"ARD_TYPE_LONG": "Большое Число",

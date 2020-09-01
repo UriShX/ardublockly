@@ -7,6 +7,7 @@
 	"ARD_TYPE_CHAR": "Charactère",
 	"ARD_TYPE_TEXT": "Texte",
 	"ARD_TYPE_BOOL": "Booléen",
+	"ARD_TYPE_POSITIVE_SHORT": "Entier positif court",
 	"ARD_TYPE_SHORT": "Entier court",
 	"ARD_TYPE_NUMBER": "Entier",
 	"ARD_TYPE_LONG": "Entier long",

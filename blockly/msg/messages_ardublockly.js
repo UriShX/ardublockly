@@ -41,6 +41,8 @@ Blockly.Msg.ARD_TYPE_CHAR = 'Character';
 Blockly.Msg.ARD_TYPE_TEXT = 'Text';
 /// Arduino Types - Boolean type
 Blockly.Msg.ARD_TYPE_BOOL = 'Boolean';
+/// Arduino Types - Short number Arduino type byte
+Blockly.Msg.ARD_TYPE_POSITIVE_SHORT = 'Short Positive Number';
 /// Arduino Types - Short number C type char
 Blockly.Msg.ARD_TYPE_SHORT = 'Short Number';
 /// Arduino Types - Number C type integer

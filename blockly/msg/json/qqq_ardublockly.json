@@ -2,6 +2,7 @@
 	"ARD_TYPE_CHAR": "Arduino Types - Character C type char",
 	"ARD_TYPE_TEXT": "Arduino Types - Text C type String",
 	"ARD_TYPE_BOOL": "Arduino Types - Boolean type",
+	"ARD_TYPE_POSITIVE_SHORT": "Arduino Types - Short number Arduino type byte",
 	"ARD_TYPE_SHORT": "Arduino Types - Short number C type char",
 	"ARD_TYPE_NUMBER": "Arduino Types - Number C type integer",
 	"ARD_TYPE_LONG": "Arduino Types - Large number C type long integer",

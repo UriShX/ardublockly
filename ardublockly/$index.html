@@ -71,7 +71,7 @@
     <div class="nav-wrapper container">
       <a class="show-on-large button-collapse" href="#" data-activates="slide-out" id="button-collapse"><i class="mdi-navigation-menu"></i></a>
       <a id="logo-container" class="brand-logo">
-        <span class="app_title translatable_title">AB4MidiCtrlrs:</span>
+        <span class="app_title translatable_title">Ardublockly:</span>
         <!-- Sketch name editable text field -->
         <span class="sketch_name_wrapper">
           <i class="mdi-image-edit sketch_name_icon"></i>
@@ -80,10 +80,8 @@
       </a>
       <!-- Horizontal Navbar links only shown on large resolutions -->
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <!-- <li><a href="#" id="button_load"><span class="translatable_open">Open</span><i class="mdi-file-file-upload left"></i></a></li> -->
-        <!-- <li><a href="#" id="button_save_xml"><span class="translatable_save">Save Blocks</span><i class="mdi-file-file-download left"></i></a></li> -->
-        <li><a href="#" id="button_save_arduino"><span class="translatable_save">Save Arduino sketch</span><i class="mdi-file-file-download left"></i></a></li>
-        <li><a id="button_arduino_create">create.arduino.cc<i id="button_arduino_create_tab" class="mdi-action-launch left"></i></a></li>
+        <li><a href="#" id="button_load"><span class="translatable_open">Open</span><i class="mdi-file-file-upload left"></i></a></li>
+        <li><a href="#" id="button_save"><span class="translatable_save">Save</span><i class="mdi-file-file-download left"></i></a></li>
         <li><a href="#" id="button_delete"><span class="translatable_deleteAll">Delete All</span><i class="mdi-action-delete left"></i></a></li>
       </ul>
     </div>
@@ -123,19 +121,13 @@
   <!-- Content -->
   <div class="container">
     <div class="row">
-      <ul id="tabs-swipe" class="tabs">
-          <li class="tab col s12 m12" onclick="showToolboxScript(true)"><a class="active" href="#tab_blocks_panel">Blocks</a></li>
-          <li class="tab col s12 m12" onclick="showToolboxScript(false)"><a href="#tab_code">Code</a></li>
-      </ul>
-        <!-- <div id="test-swipe-1" class="col s12 blue">Test 1</div>
-        <div id="test-swipe-2" class="col s12 red">Test 2</div> -->
-        <div class="tabs-content">
-        <div id="tab_blocks_panel" class="col s12 m12">
-      <div class="col s12 m12" style="position:relative">
+      <div class="col s12 m12 l8" style="position:relative">
+    <!--div class="row goog-splitpane">
+      <div class="col s12 m12 l8 goog-splitpane-first-container" style="position:relative"-->
         <!-- Toolbox visibility button -->
         <a id="button_toggle_toolbox" class="waves-effect waves-light btn-flat button_toggle_toolbox_off" style="display: none"><i id="button_toggle_toolbox_icon" class="mdi-action-visibility-off"></i></a>
         <!-- Arduino IDE action buttons -->
-        <!-- <div id="ide_buttons_wrapper">
+        <div id="ide_buttons_wrapper">
           <a id="button_ide_left" class="waves-effect waves-light waves-circle btn-floating z-depth-1-half arduino_yellow"><i id="button_ide_left_icon" class="mdi-action-open-in-browser"></i></a>
           <a id="button_ide_middle" class="waves-effect waves-light waves-circle btn-floating z-depth-1-half arduino_teal"><i id="button_ide_middle_icon" class="mdi-navigation-check"></i></a>
           <a id="button_ide_large" class="waves-effect waves-light waves-circle btn-floating z-depth-1-half arduino_orange"><i id="button_ide_large_icon" class="mdi-av-play-arrow"></i></a>
@@ -177,7 +169,7 @@
               </div>
             </div>
           </div>
-        </div> -->
+        </div>
         <!-- Blockly Panel -->
         <div class="card-panel white" style="padding: 0">
           <div id="blocks_panel" class="content blocks_panel_large">
@@ -185,12 +177,9 @@
           </div>
         </div>
       </div>
-    </div>
 
-<div id="tab_code" class="col s12 m12">
-      <!-- <div class="col s12 m12 l4"> -->
+      <div class="col s12 m12 l4">
       <!--div class="col s12 m12 l4 goog-splitpane-second-container"-->
-
         <ul class="collapsible z-depth-1" data-collapsible="accordion">
           <li>
             <div class="collapsible-header active">
@@ -213,15 +202,13 @@
           </li>
         </ul>
       </div>
-    </div>
       <!-- <div class="goog-splitpane-handle goog-splitpane-handle-horizontal" style="width: 10px; left: 516px; top: 0px; box-sizing: border-box; height: 300px; position: absolute; overflow: hidden; z-index: 2;"></div>
       <div style="position: relative; z-index: -1; box-sizing: border-box; width: 1664px; height: 300px;"></div> -->
     </div>
   </div>
-</div>
-</div>
+
   <!-- IDE Output content -->
-  <!-- <div class="ide_output_wrapper">
+  <div class="ide_output_wrapper">
     <ul class="collapsible ide_output_collapsible" data-collapsible="expandable">
       <li>
         <div id="ide_output_collapsible_header" class="collapsible-header ide_output_header_normal">
@@ -233,8 +220,8 @@
         </div>
       </li>
     </ul>
-  </div> -->
-  <!-- <div id="ide_output_spacer"></div> -->
+  </div>
+  <div id="ide_output_spacer"></div>
 
   <!-- Settings: Displayed as a Materialize Modal -->
   <div id="settings_dialog" class="modal modal-fixed-footer">
@@ -354,11 +341,6 @@
       window.removeEventListener('load', load, false);
       Ardublockly.init();
     });
-  </script>
-  <script>
-  function showToolboxScript(show) {
-    $(".blocklyToolboxDiv").css("display", show ? "block":"none");
-  }
   </script>
 </body>
 </html>
